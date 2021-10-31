@@ -1,0 +1,43 @@
+﻿@using Faculity_System.Models
+@model List<Student>
+@{
+    ViewBag.Title = "Students";
+}
+
+<center><h2>Students Data</h2></center>
+
+
+<div class="container">
+    <br />
+
+    <a href="/Home/Index" class="btn btn-primary">Back To Departments</a>
+
+    <br /><br />
+    <table class="table table-bordered table-striped table-hover text-center font-weight-bold">
+        <tr class="thead-dark">
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Department ID</th>
+            <th>Update</th>
+            <th>Remove</th>
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Age</td>
+                <td>@item.Email</td>
+                <td>@item.DPTId</td>
+
+                <td><a asp-action="Edit" asp-controller="Employee" asp-route-id="@item.Id" class="btn btn-success">Update</a></td>
+                <td><a asp-action="Delete" asp-controller="Employee" asp-route-id="@item.Id" class="btn btn-danger">Remove</a></td>
+
+            </tr>
+        }
+    </table>
+</div>

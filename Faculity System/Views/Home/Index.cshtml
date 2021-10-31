@@ -1,0 +1,96 @@
+﻿@using Faculity_System.Models;
+@model List<Department> 
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="container">
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+
+                @foreach (var item in Model)
+                {
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <a href="/Home/Students/@item.Id">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"></div>
+                            </div>
+                            <img class="img-fluid" src="~/assets/img/CS.png" alt="..." />
+                        </div>
+                    </a>
+                        <div  style="text-align:center">
+                            <h3>@item.Name</h3>
+                            <p>@item.Descreaption</p>
+                        </div>
+                    
+                </div>
+                    
+                }
+                <!-- Portfolio Item 1-->
+                <!--<div class="col-md-6 col-lg-4 mb-5">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+        </div>
+    </div>-->
+                <!-- Portfolio Item 2-->
+                <!--<div class="col-md-6 col-lg-4 mb-5">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+        </div>
+    </div>-->
+                <!-- Portfolio Item 3-->
+                <!--<div class="col-md-6 col-lg-4 mb-5">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
+        </div>
+    </div>-->
+                <!-- Portfolio Item 4-->
+                <!--<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
+        </div>
+    </div>-->
+                <!-- Portfolio Item 5-->
+                <!--<div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
+        </div>
+    </div>-->
+                <!-- Portfolio Item 6-->
+                <!--<div class="col-md-6 col-lg-4">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="portfolio-item-caption-content text-center text-white"></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+        </div>
+    </div>-->
+            </div>
+        </div>
+    </section>
+</div>
